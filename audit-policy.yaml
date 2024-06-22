@@ -1,0 +1,9 @@
+# Log all Pod get and list requests at the Metadata level.
+apiVersion: audit.k8s.io/v1
+kind: Policy
+rules:
+- level: Metadata
+  verbs: ["get", "list"]
+  resources:
+  - group: ""
+    resources: ["pods"]
